@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700');
+    </style>
+  </defs>
+  <text x="0" y="52" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#333333">Hell</text>
+  <g transform="translate(144, 0)">
+    <text x="-2" y="52" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#333333">o</text>
+    <path d="M17 26 C17 17.5 27 14 27 22 C27 28 17 32 17 26Z" fill="#F8C8D4" opacity="0.9"/>
+    <path d="M27 22 C27 14 37 17.5 37 26 C37 32 27 28 27 22Z" fill="#F8C8D4" opacity="0.9"/>
+  </g>
+  <text x="190" y="52" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#333333"> Us</text>
+</svg>
