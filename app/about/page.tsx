@@ -8,7 +8,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image 
-          src="https://picsum.photos/seed/about/1920/1080" 
+          src="/images/hero-bg.webp" 
           alt="Mother and daughter" 
           fill 
           className="object-cover opacity-80 mix-blend-multiply"

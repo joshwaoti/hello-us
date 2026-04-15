@@ -3,6 +3,7 @@
 @theme {
   --color-brand-pink: #F8C8D4;
   --color-brand-cream: #FAFAFA;
+  --color-brand-sand: #F5F0E8;
   --color-brand-charcoal: #333333;
   --color-brand-beige: #F5F0E8;
   --color-brand-red: #9B1C1C;
@@ -15,4 +16,23 @@
 body {
   background-color: var(--color-brand-cream);
   color: var(--color-brand-charcoal);
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #F5F0E8 25%, #FAFAFA 50%, #F5F0E8 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

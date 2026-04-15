@@ -1,0 +1,28 @@
+{
+  "name": "Hello Us",
+  "short_name": "Hello Us",
+  "description": "Mommy & Me Fashion | Timeless Women's Sets — Made to Order in 48 Hours",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F0E8",
+  "theme_color": "#F8C8D4",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["fashion", "shopping"],
+  "appleWebApp": {
+    "statusBarStyle": "default",
+    "title": "Hello Us"
+  }
+}

@@ -57,11 +57,13 @@ export default function CartDrawer() {
                       <div className="flex-1 flex flex-col justify-between">
                         <div>
                           <h3 className="font-medium text-lg">{item.name}</h3>
+                          {item.length && <p className="text-sm text-gray-500">{item.length}</p>}
                           <p className="text-sm text-gray-500">Size: {item.size}</p>
+                          {item.color && <p className="text-sm text-gray-500">Color: {item.color}</p>}
                           <p className="text-sm text-gray-500">Qty: {item.quantity}</p>
                         </div>
                         <div className="flex items-center justify-between mt-2">
-                          <p className="font-medium">${item.price.toFixed(2)}</p>
+                          <p className="font-medium">KSh {item.price.toLocaleString()}</p>
                           <button 
                             onClick={() => removeFromCart(item.id, item.size)}
                             className="text-gray-400 hover:text-red-500 transition-colors"
@@ -80,7 +82,7 @@ export default function CartDrawer() {
               <div className="p-6 border-t border-gray-100 bg-gray-50">
                 <div className="flex justify-between items-center mb-6">
                   <span className="font-medium text-lg">Subtotal</span>
-                  <span className="font-serif text-xl">${cartTotal.toFixed(2)}</span>
+                  <span className="font-serif text-xl">KSh {cartTotal.toLocaleString()}</span>
                 </div>
                 <Link 
                   href="/checkout" 

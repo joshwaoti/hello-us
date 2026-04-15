@@ -22,8 +22,18 @@ export default function CheckoutPage() {
 
   return (
     <div className="bg-brand-cream min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid lg:grid-cols-12 gap-12">
+      <section className="relative h-[17vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image src="/images/hero-bg.webp" alt="" fill priority className="object-cover object-center" sizes="100vw" quality={80} />
+          <div className="absolute inset-0 bg-brand-charcoal/50 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
+        </div>
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white">Checkout</h1>
+        </div>
+      </section>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Left: Form Steps */}
           <div className="lg:col-span-7">
             {/* Progress Indicator */}
@@ -209,7 +219,7 @@ export default function CheckoutPage() {
 
           {/* Right: Order Summary */}
           <div className="lg:col-span-5">
-            <div className="bg-white rounded-2xl p-6 md:p-8 sticky top-24 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-2xl p-6 md:p-8 sticky top-28 sm:top-24 shadow-sm border border-gray-100">
               <h3 className="font-serif text-xl mb-6 text-brand-charcoal">Order Summary</h3>
               <div className="space-y-6 mb-6 max-h-[40vh] overflow-y-auto pr-2 scrollbar-hide">
                 {items.map((item) => (

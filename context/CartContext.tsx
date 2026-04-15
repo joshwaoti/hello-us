@@ -1,15 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState } from 'react';
-
-type CartItem = {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-  image: string;
-  size: string;
-};
+import type { CartItem, LengthVariant } from '@/lib/types';
 
 type CartContextType = {
   isCartOpen: boolean;
@@ -32,10 +24,12 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const addToCart = (newItem: CartItem) => {
     setItems((prev) => {
-      const existing = prev.find((i) => i.id === newItem.id && i.size === newItem.size);
+      const existing = prev.find((i) => i.id === newItem.id && i.size === newItem.size && i.length === newItem.length);
       if (existing) {
         return prev.map((i) =>
-          i.id === newItem.id && i.size === newItem.size ? { ...i, quantity: i.quantity + newItem.quantity } : i
+          i.id === newItem.id && i.size === newItem.size && i.length === newItem.length
+            ? { ...i, quantity: i.quantity + newItem.quantity }
+            : i
         );
       }
       return [...prev, newItem];

@@ -1,21 +1,36 @@
-import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
+import Image from 'next/image';
+import { Mail, MapPin, MessageCircle } from 'lucide-react';
 
 export default function ContactPage() {
   return (
-    <div className="bg-brand-cream min-h-screen py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-serif font-bold text-brand-charcoal mb-4">Get in Touch</h1>
-          <p className="text-lg text-brand-charcoal/80 max-w-2xl mx-auto">
-            We&apos;re here to help with sizing, custom orders, or any questions you might have about our pieces.
+    <div className="bg-brand-cream min-h-screen">
+      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden pt-16">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-bg.webp"
+            alt=""
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+            quality={80}
+          />
+          <div className="absolute inset-0 bg-brand-charcoal/50 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
+        </div>
+        <div className="relative z-10 text-center px-4 pt-12">
+          <h1 className="text-5xl md:text-6xl font-serif font-bold text-white mb-3">Get in Touch</h1>
+          <p className="text-white/80 font-sans text-lg max-w-xl mx-auto">
+            We&apos;re here to help with sizing, custom orders, or any questions about our pieces.
           </p>
         </div>
+      </section>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-          {/* Contact Info */}
           <div className="space-y-10">
             <h2 className="text-3xl font-serif text-brand-charcoal mb-6">Contact Information</h2>
-            
+
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-brand-pink/20 rounded-full flex items-center justify-center flex-shrink-0">
                 <MessageCircle className="w-6 h-6 text-brand-pink" />
@@ -56,7 +71,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="bg-white p-8 rounded-3xl shadow-xl border border-brand-pink/10">
             <h2 className="text-2xl font-serif text-brand-charcoal mb-6">Send a Message</h2>
             <form className="space-y-6">
