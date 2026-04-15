@@ -74,7 +74,7 @@ export default function ContactPage() {
           <div className="bg-white p-8 rounded-3xl shadow-xl border border-brand-pink/10">
             <h2 className="text-2xl font-serif text-brand-charcoal mb-6">Send a Message</h2>
             <form className="space-y-6">
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="relative">
                   <input required type="text" id="name" className="peer w-full border-b border-gray-300 bg-transparent py-2 text-brand-charcoal focus:border-brand-pink focus:outline-none transition-colors placeholder-transparent" placeholder="Name" />
                   <label htmlFor="name" className="absolute left-0 -top-3.5 text-xs text-gray-500 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-pink">Name</label>

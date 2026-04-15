@@ -27,7 +27,7 @@ export default function CollectionsPage() {
 
   return (
     <div className="bg-brand-cream min-h-screen">
-      <section className="relative h-[17vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden pt-16">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-bg.webp"
@@ -41,9 +41,9 @@ export default function CollectionsPage() {
           <div className="absolute inset-0 bg-brand-charcoal/50 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
         </div>
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-[56px] font-serif font-bold text-white mb-2">Our Collections</h1>
-          <p className="text-white/80 font-sans text-lg">Made to Order. Ready in 48 Hours.</p>
+        <div className="relative z-10 text-center px-4 pt-12">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white mb-2">Our Collections</h1>
+          <p className="text-white/80 font-sans text-base sm:text-lg">Made to Order. Ready in 48 Hours.</p>
         </div>
       </section>
 

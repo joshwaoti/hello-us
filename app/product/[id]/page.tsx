@@ -106,6 +106,7 @@ export default function ProductPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16 lg:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 lg:gap-16 items-start">
 
+          {/* Desktop: vertical thumbnail + main image */}
           <div className="hidden lg:flex gap-4 lg:sticky lg:top-24 self-start">
             <div className="flex flex-col gap-3 overflow-y-auto max-h-[600px] scrollbar-hide w-20 flex-shrink-0">
               {product.images.map((img, idx) => (
@@ -146,6 +147,49 @@ export default function ProductPage() {
               <div className="absolute top-4 right-4 bg-brand-pink text-brand-charcoal px-4 py-1.5 rounded-full text-xs font-medium shadow-sm z-10">
                 48hr
               </div>
+            </div>
+          </div>
+
+          {/* Mobile: main image + horizontal thumbnail strip */}
+          <div className="lg:hidden">
+            <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-gray-100 mb-3">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeImageIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={product.images[activeImageIndex].src}
+                    alt={product.images[activeImageIndex].alt}
+                    fill
+                    className="object-cover"
+                  />
+                </motion.div>
+              </AnimatePresence>
+              <div className="absolute top-3 left-3 bg-brand-charcoal text-white px-3 py-1 rounded-full text-xs font-medium z-10">
+                {product.tag}
+              </div>
+              <div className="absolute top-3 right-3 bg-brand-pink text-brand-charcoal px-3 py-1 rounded-full text-xs font-medium z-10">
+                48hr
+              </div>
+            </div>
+            {/* Thumbnail strip */}
+            <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
+              {product.images.map((img, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveImageIndex(idx)}
+                  className={`relative w-16 h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-colors ${
+                    activeImageIndex === idx ? 'border-brand-pink' : 'border-gray-200'
+                  }`}
+                >
+                  <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="64px" />
+                </button>
+              ))}
             </div>
           </div>
 
